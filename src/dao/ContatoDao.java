@@ -76,7 +76,7 @@ public int inserirContato(Contato novoContato) {
 			pst.setString(3, novoContato.getEmail());			
 			pst.executeUpdate();
 			
-			// Pegando a chave
+			
 			ResultSet rs = pst.getGeneratedKeys();
 			int chaveGerada;
 			if (rs.next()) {
