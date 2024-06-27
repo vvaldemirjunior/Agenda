@@ -1,8 +1,17 @@
 package view;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.List;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -11,36 +20,13 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.border.BevelBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
 import dao.ContatoDao;
 import entidades.Contato;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
-
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Color;
-import javax.swing.border.CompoundBorder;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextPane;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
-import java.awt.Canvas;
-import java.awt.Panel;
-import com.jgoodies.forms.factories.DefaultComponentFactory;
-import java.awt.Label;
-import javax.swing.ImageIcon;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.text.ParseException;
 
 public class ControleAgenda {
 
@@ -48,8 +34,7 @@ public class ControleAgenda {
 	private JTable table;
 	private DefaultTableModel modelo;
 	private ContatoDao dao = new ContatoDao();
-	// private JTextField textField;
-	private List<Contato> lista = dao.listarContatos();
+
 
 	/**
 	 * Launch the application.

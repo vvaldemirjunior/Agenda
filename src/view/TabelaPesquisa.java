@@ -1,6 +1,6 @@
 package view;
 
-import java.awt.EventQueue;
+
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -10,7 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
-import dao.ContatoDao;
+
 import entidades.Contato;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
@@ -23,8 +23,7 @@ public class TabelaPesquisa extends JFrame {
 	private JPanel contentPane;
 	private JTable table;
 	private DefaultTableModel modelo;
-	private ContatoDao dao = new ContatoDao();
-	private List<Contato> lista = dao.listarContatos();
+	
 	/**
 	 * Launch the application.
 	 */
