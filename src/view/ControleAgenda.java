@@ -290,7 +290,7 @@ public class ControleAgenda {
 
 		int resposta = JOptionPane.showConfirmDialog(null, painel, "Pesquisar", JOptionPane.OK_CANCEL_OPTION);
 
-		if (resposta == JOptionPane.OK_OPTION) {
+		if ( (resposta == JOptionPane.OK_OPTION) && (!campoTexto.getText().equals(""))) {
 
 			List<Contato> filtragem;
 			String valor = campoTexto.getText();
@@ -308,6 +308,10 @@ public class ControleAgenda {
 
 			}
 
+		} else {
+			
+			JOptionPane.showMessageDialog(null, "Preencha o campo de pesquisa", "ERRO", JOptionPane.ERROR_MESSAGE);
+			
 		}
 
 	}
